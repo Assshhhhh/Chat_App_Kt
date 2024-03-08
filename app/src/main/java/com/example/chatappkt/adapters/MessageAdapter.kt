@@ -9,7 +9,6 @@ import com.example.chatappkt.R
 import com.example.chatappkt.databinding.ItemReceivedMessageBinding
 import com.example.chatappkt.databinding.ItemSentMessageBinding
 import com.example.chatappkt.models.MessageModel
-import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 
 class MessageAdapter(var context: Context, var messageList: ArrayList<MessageModel>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -19,9 +18,9 @@ class MessageAdapter(var context: Context, var messageList: ArrayList<MessageMod
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         if (viewType == 1){
-            return SentViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_received_message, parent, false))
+            return ReceiveViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_received_message, parent, false))
         }else{
-            return ReceiveViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_sent_message, parent, false))
+            return SentViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_sent_message, parent, false))
         }
     }
 
