@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/edit_background_dark"
+        android:padding="5dp"
+        android:layout_alignParentLeft="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_receive_message"
+            android:text="This is received message"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/AliceBlue"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
